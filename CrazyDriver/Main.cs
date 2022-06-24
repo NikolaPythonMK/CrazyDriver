@@ -10,12 +10,19 @@ using System.Windows.Forms;
 
 namespace CrazyDriver
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public UserData userData { get; set; }
+        public Main(UserData userData)
         {
             InitializeComponent();
+            this.userData = userData;
+            label1.Text = userData.user.userName;
         }
 
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

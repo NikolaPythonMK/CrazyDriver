@@ -24,7 +24,9 @@ namespace CrazyDriver
             var tmp = userList.Where(u => u.userEmail.Equals(userToRegister.userEmail)).FirstOrDefault();
             if(tmp == null)
             {
-                userList.Add(new User() { ID = new Guid(), userEmail = userToRegister.userEmail, userName = userToRegister.userName, userPassword = userToRegister.userPassword });
+                User userToAdd = new User() { ID = new Guid(), userEmail = userToRegister.userEmail, userName = userToRegister.userName, userPassword = userToRegister.userPassword };
+                userList.Add(userToAdd);
+                UserDictonary.addUserWithData(userToRegister.userEmail, new UserData(userToAdd));
             }
             else
             {
@@ -32,7 +34,7 @@ namespace CrazyDriver
             }
         }
 
-        public User loginUser(UserLoginDTO userToLogin)
+        public UserData loginUser(UserLoginDTO userToLogin)
         {
             var tmp = userList.Where(u => u.userEmail.Equals(userToLogin.userEmail)).FirstOrDefault();
             if (tmp != null)
@@ -41,7 +43,16 @@ namespace CrazyDriver
                 {
                     throw new Exception("Password is not correct!");
                 }
-                return tmp;
+
+                UserData userData = UserDictonary.getUserData(tmp.userEmail);
+                if(userData != null)
+                {
+                    return userData;
+                }
+                else
+                {
+                    throw new Exception("UserData not set");
+                }
             }
             else
             {
