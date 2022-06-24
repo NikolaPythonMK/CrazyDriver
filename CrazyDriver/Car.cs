@@ -9,7 +9,6 @@ namespace CrazyDriver
 {
     public abstract class Car
     {
-<<<<<<< HEAD
         public Bitmap carModel { get; set; }
         public decimal horsePower { get; set; }
         public decimal speed { get; set; }
@@ -19,7 +18,5 @@ namespace CrazyDriver
             this.carModel = new Bitmap(path);
             this.horsePower = horsePower;
         }
-=======
->>>>>>> master
     }
 }
