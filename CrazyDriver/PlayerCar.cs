@@ -26,7 +26,27 @@ namespace CrazyDriver
                 return true;
             }
         }
+        //TODO: drawPlayerCar(), isHit(), move(), spawnBotCar(), 
 
+        public void drawPlayerCar()
+        {
+
+        }
+
+        public void isHit()
+        {
+
+        }
+
+        public void move()
+        {
+
+        }
+
+        public void spawnBotCar()
+        {
+
+        }
 
     }
 }
