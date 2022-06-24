@@ -8,6 +8,6 @@ namespace CrazyDriver
 {
     public class Car
     {
-
+        public int carid { get; set; }
     }
 }
