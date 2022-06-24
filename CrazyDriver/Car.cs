@@ -12,6 +12,8 @@ namespace CrazyDriver
         public Bitmap carModel { get; set; }
         public decimal horsePower { get; set; }
         public decimal speed { get; set; }
+        //
+
 
         public Car(String path, decimal horsePower)
         {
