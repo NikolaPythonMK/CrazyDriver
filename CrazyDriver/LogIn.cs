@@ -44,7 +44,9 @@ namespace CrazyDriver
 
                 try
                 {
-                    User returnUser = users.loginUser(userLogin);
+                    UserData returnUserData = users.loginUser(userLogin);
+                    Main tma = new Main(returnUserData);
+                    tma.Show();
                 }catch(Exception ex)
                 {
                     lblException.Text = ex.Message;
