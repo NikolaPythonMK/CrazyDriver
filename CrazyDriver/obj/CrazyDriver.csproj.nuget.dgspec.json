@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jovan\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj": {}
+    "C:\\Users\\Nikola\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jovan\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj": {
+    "C:\\Users\\Nikola\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jovan\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj",
+        "projectUniqueName": "C:\\Users\\Nikola\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj",
         "projectName": "CrazyDriver",
-        "projectPath": "C:\\Users\\Jovan\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj",
-        "packagesPath": "C:\\Users\\Jovan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jovan\\Desktop\\CrazyDriver\\CrazyDriver\\obj\\",
+        "projectPath": "C:\\Users\\Nikola\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver.csproj",
+        "packagesPath": "C:\\Users\\Nikola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nikola\\Desktop\\CrazyDriver\\CrazyDriver\\CrazyDriver\\CrazyDriver\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Jovan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Nikola\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
@@ -57,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
