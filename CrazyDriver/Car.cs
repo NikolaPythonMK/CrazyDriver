@@ -10,8 +10,9 @@ namespace CrazyDriver
     public abstract class Car
     {
         public Bitmap carModel { get; set; }
+        public static int WIDTH = 100;
+        public static int HEIGHT = 200;
         public decimal horsePower { get; set; }
-        public decimal speed { get; set; }
 
         public Car(String path, decimal horsePower)
         {
