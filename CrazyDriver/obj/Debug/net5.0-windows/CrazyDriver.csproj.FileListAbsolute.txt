@@ -42,3 +42,4 @@ C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debu
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Lose.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Paused.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Menu.resources
+C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Settings.resources

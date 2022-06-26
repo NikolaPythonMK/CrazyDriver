@@ -34,8 +34,11 @@ namespace CrazyDriver
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            menuMusic = new SoundPlayer(@"sounds\menu.wav");
-            menuMusic.Play();
+            if(ControlsConfiguration.menuMusic == true)
+            {
+                menuMusic = new SoundPlayer(@"sounds\menu.wav");
+                menuMusic.Play();
+            }
             //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
             this.BackgroundImage = getFormBackgroundImage();
@@ -46,6 +49,13 @@ namespace CrazyDriver
         {
             Game game = new Game();
             DialogResult res = game.ShowDialog();
+        }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+            DataTransfer.point = this.Location;
+            settings.ShowDialog();     
         }
     }
 }

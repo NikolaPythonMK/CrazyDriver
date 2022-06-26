@@ -40,8 +40,6 @@ namespace CrazyDriver
             scoreCounter = 0;
             carSpeedIncrease = 10;
 
-            music = new SoundPlayer(@"sounds\ingame_music.wav");
-            music.Play();
             Invalidate();
         }
 
@@ -73,6 +71,15 @@ namespace CrazyDriver
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             pauseButton.Location = new Point(this.Width - 100, 30);
+            if (ControlsConfiguration.menuMusic)
+            {
+                Menu.menuMusic.Stop();
+            }
+            if (ControlsConfiguration.gameMusic == true)
+            {
+                music = new SoundPlayer(@"sounds\ingame_music.wav");
+                music.Play();
+            }
         }
 
         private void Game_SizeChanged(object sender, EventArgs e)
@@ -83,11 +90,11 @@ namespace CrazyDriver
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode.Equals(Keys.Left))
+            if (e.KeyCode.Equals(ControlsConfiguration.leftControl))
             {
                 state = 1;
             }
-            else if (e.KeyCode.Equals(Keys.Right))
+            else if (e.KeyCode.Equals(ControlsConfiguration.rightControl))
             {
                 state = 2;
             }
@@ -162,8 +169,14 @@ namespace CrazyDriver
             }
             else
             {
-                music.Stop();
-                Menu.menuMusic.Play();
+                if(ControlsConfiguration.gameMusic == true)
+                {
+                    music.Stop();
+                }
+                if(ControlsConfiguration.menuMusic == true)
+                {
+                    Menu.menuMusic.Play();
+                }
                 this.Close();
             }
         }
