@@ -45,7 +45,7 @@ namespace CrazyDriver
                 try
                 {
                     UserData returnUserData = users.loginUser(userLogin);
-                    Main tma = new Main(returnUserData);
+                    Menu tma = new Menu(returnUserData);
                     tma.Show();
                 }catch(Exception ex)
                 {

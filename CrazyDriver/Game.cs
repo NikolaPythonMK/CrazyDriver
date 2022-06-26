@@ -22,6 +22,7 @@ namespace CrazyDriver
         public int scoreCounter;
         public static int scoreSeed = 1;
         public int carSpeedIncrease;
+        SoundPlayer music;
         public Game()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace CrazyDriver
             scoreCounter = 0;
             carSpeedIncrease = 10;
 
-            SoundPlayer music = new SoundPlayer(@"sounds\ingame_music.wav");
+            music = new SoundPlayer(@"sounds\ingame_music.wav");
             music.Play();
             Invalidate();
         }
@@ -116,7 +117,9 @@ namespace CrazyDriver
                 }
                 else
                 {
-                    Application.Exit();
+                    music.Stop();
+                    Menu.menuMusic.Play();
+                    this.Close();
                 }
             }
             scene.move(state);
@@ -159,7 +162,9 @@ namespace CrazyDriver
             }
             else
             {
-                Application.Exit();
+                music.Stop();
+                Menu.menuMusic.Play();
+                this.Close();
             }
         }
 

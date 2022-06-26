@@ -10,7 +10,7 @@
     <Compile Update="Lose.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Main.cs">
+    <Compile Update="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Paused.cs">

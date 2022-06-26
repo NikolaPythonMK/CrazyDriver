@@ -46,7 +46,10 @@ namespace CrazyDriver
             Rectangle p = new Rectangle(X_Position, Y_Position, PlayerCar.WIDTH, PlayerCar.HEIGHT);
             for(int i = 0; i < cars.Count; i++)
             {
-                if(p.Contains(cars[i].X_Pos, cars[i].Y_Pos))
+                if (X_Position < cars[i].X_Pos + Car.WIDTH &&
+                    X_Position + Car.WIDTH > cars[i].X_Pos &&
+                    Y_Position < cars[i].Y_Pos + Car.HEIGHT &&
+                    Car.HEIGHT + Y_Position > cars[i].Y_Pos)
                 {
                     cars[i].Y_Pos += 300;
                     return true;

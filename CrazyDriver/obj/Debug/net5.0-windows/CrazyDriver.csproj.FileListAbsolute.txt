@@ -28,7 +28,6 @@ C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\bin\Debu
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.csproj.AssemblyReference.cache
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Game.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.LogIn.resources
-C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Main.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Register.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.csproj.GenerateResource.cache
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.GeneratedMSBuildEditorConfig.editorconfig
@@ -42,3 +41,4 @@ C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debu
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Properties.Resources.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Lose.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Paused.resources
+C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Menu.resources

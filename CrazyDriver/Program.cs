@@ -17,7 +17,9 @@ namespace CrazyDriver
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogIn());
+            //Application.Run(new LogIn());
+            //Application.Run(new Game());
+            Application.Run(new Menu(new UserData(new User())));
         }
     }
 }
