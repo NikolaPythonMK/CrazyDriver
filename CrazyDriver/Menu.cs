@@ -39,6 +39,7 @@ namespace CrazyDriver
             //this.FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
             this.BackgroundImage = getFormBackgroundImage();
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
         }
 
         private void playBtn_Click(object sender, EventArgs e)
