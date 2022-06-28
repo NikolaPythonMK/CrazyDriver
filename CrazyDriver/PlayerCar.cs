@@ -1,52 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class PlayerCar : Car
     {
         public decimal health { get; set; }
-        public PlayerCar(string path, decimal horsePower, decimal health) : base(path, horsePower)
+        public decimal speed { get; set; }
+        public decimal price { get; set; }
+        public PlayerCar(string path, decimal horsePower, decimal price) : base(path, horsePower)
         {
-            this.health = health;
+            speed = horsePower * (decimal)0.48;
+            this.price = price;
         }
-
-        public bool carCrash(decimal damage)
-        {
-            if(health - damage <= 0)
-            {
-                return false;
-            }
-            else
-            {
-                health -= damage;
-                return true;
-            }
-        }
-        //TODO: drawPlayerCar(), isHit(), move(), spawnBotCar(), 
-
-        public void drawPlayerCar()
-        {
-
-        }
-
-        public void isHit()
-        {
-
-        }
-
-        public void move()
-        {
-
-        }
-
-        public void spawnBotCar()
-        {
-
-        }
-
     }
 }

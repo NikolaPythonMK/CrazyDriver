@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class UserData
     {
         public User user { get; set; }

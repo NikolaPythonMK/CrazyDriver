@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CrazyDriver
 {
+    [Serializable]
     public class User
     {
         public Guid ID { get; set; }
@@ -26,7 +28,10 @@ namespace CrazyDriver
             {
                 User userToAdd = new User() { ID = new Guid(), userEmail = userToRegister.userEmail, userName = userToRegister.userName, userPassword = userToRegister.userPassword };
                 userList.Add(userToAdd);
-                UserDictonary.addUserWithData(userToRegister.userEmail, new UserData(userToAdd));
+                UserData userData = new UserData(userToAdd);
+                userData.userCars.Add(new PlayerCar("images/regularCar10.png", 10, 0));
+
+                UserDictonary.addUserWithData(userToRegister.userEmail, userData);
             }
             else
             {

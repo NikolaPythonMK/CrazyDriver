@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +19,32 @@ namespace CrazyDriver
         public LogIn()
         {
             InitializeComponent();
-            users = new User();
-        }
 
+                try
+                {
+                    FileStream s = new FileStream("data.data", FileMode.Open);
+                    IFormatter f = new BinaryFormatter();
+
+    #pragma warning disable SYSLIB0011 // Type or member is obsolete
+                    SaveData tmp = (SaveData)f.Deserialize(s);
+    #pragma warning restore SYSLIB0011 // Type or member is obsolete
+
+                    if (tmp == null)
+                    {
+                        users = new User();
+                    }
+                    else
+                    {
+                        users = tmp.users;
+                        UserDictonary.userDictonary = tmp.userDictonary.dictonaryToSave;
+                    }
+                 }
+                 catch (Exception)
+                 {
+                    users = new User();
+                 }
+                
+        }
         private void lblRegisterHere_Click(object sender, EventArgs e)
         {
             Register registerUser = new Register(users);
@@ -45,13 +71,21 @@ namespace CrazyDriver
                 try
                 {
                     UserData returnUserData = users.loginUser(userLogin);
-                    Main tma = new Main(returnUserData);
-                    tma.Show();
+
+                    Hide();
+                        Menu tma = new Menu(returnUserData, users);
+                        tma.ShowDialog();
+                    Close();
                 }catch(Exception ex)
                 {
                     lblException.Text = ex.Message;
                 }
             }
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

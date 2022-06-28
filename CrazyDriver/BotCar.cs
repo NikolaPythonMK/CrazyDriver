@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class BotCar : Car
     {
-        public BotCar(string path, decimal horsePower) : base(path, horsePower)
+        public int X_Pos { get; set; }
+        public int Y_Pos { get; set; }
+        public BotCar(string path, decimal horsePower, int X, int Y) : base(path, horsePower)
         {
+            X_Pos = X;
+            Y_Pos = Y;
         }
 
-        public void speedUp()
+        public void move(int speed)
         {
-            speed += 5;
+            Y_Pos += speed;
         }
     }
 }

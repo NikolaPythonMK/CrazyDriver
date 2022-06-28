@@ -7,14 +7,18 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public abstract class Car
     {
         public Bitmap carModel { get; set; }
+        public string path { get; set; }
+        public static int WIDTH = 100;
+        public static int HEIGHT = 200;
         public decimal horsePower { get; set; }
-        public decimal speed { get; set; }
 
-        public Car(String path, decimal horsePower)
+        public Car(string path, decimal horsePower)
         {
+            this.path = path;
             this.carModel = new Bitmap(path);
             this.horsePower = horsePower;
         }

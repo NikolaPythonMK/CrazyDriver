@@ -18,6 +18,9 @@ namespace CrazyDriver
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LogIn());
+            //Application.Run(new Shop(new UserData(new User())));
+            //Application.Run(new Game());
+            //Application.Run(new Menu(new UserData(new User())));
         }
     }
 }
