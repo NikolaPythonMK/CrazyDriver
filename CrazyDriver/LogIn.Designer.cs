@@ -115,7 +115,6 @@ namespace CrazyDriver
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 427);
-            this.ControlBox = false;
             this.Controls.Add(this.lblException);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -129,6 +128,7 @@ namespace CrazyDriver
             this.MinimizeBox = false;
             this.Name = "LogIn";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

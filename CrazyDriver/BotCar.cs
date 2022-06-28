@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class BotCar : Car
     {
         public int X_Pos { get; set; }

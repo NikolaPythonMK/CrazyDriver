@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class ControlsConfiguration
     {
         public static Keys leftControl = Keys.Left;

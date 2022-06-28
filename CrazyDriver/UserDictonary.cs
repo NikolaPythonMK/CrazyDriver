@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public static class UserDictonary
     {
         public static Dictionary<string, UserData> userDictonary { get; set; } = new Dictionary<string, UserData>();

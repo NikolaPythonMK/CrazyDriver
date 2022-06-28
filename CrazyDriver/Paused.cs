@@ -12,9 +12,13 @@ namespace CrazyDriver
 {
     public partial class Paused : Form
     {
-        public Paused()
+        public UserData user { get; set; }
+        public int scoreCounter { get; set; }
+        public Paused(UserData user, int scoreCounter)
         {
             InitializeComponent();
+            this.user = user;
+            this.scoreCounter = scoreCounter;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,6 +29,13 @@ namespace CrazyDriver
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (user.userScore < scoreCounter)
+            {
+                user.userScore = scoreCounter;
+            }
+
+            user.userCoins += (int)(scoreCounter * 0.1);
+
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }

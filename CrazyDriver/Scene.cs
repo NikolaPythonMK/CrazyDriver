@@ -5,6 +5,7 @@ using System.IO;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class Scene
     {
         private static Random random = new Random();
@@ -15,11 +16,12 @@ namespace CrazyDriver
         public int Y_Position { get; set; }
         public int score { get; set; }
         public int carsPerSpawn { get; set; }
+        public decimal carHorsePower { get; set; }
         public static int maxCarsPerSpawn = 4;
 
         public List<BotCar> cars;
 
-        public Scene(int width, int height)
+        public Scene(int width, int height, PlayerCar car)
         {
             this.width = width;
             this.heigth = heigth;
@@ -29,7 +31,8 @@ namespace CrazyDriver
             score = 0;
             carsPerSpawn = 1;
             //vo PlayerCar() ke se primaat propertinjata od DTO objektot (slika, horsepower)
-            player = new PlayerCar(@"images/sportsCar2.png", 100);
+            player = car;
+            carHorsePower = car.horsePower;
         }
 
         public void draw(Graphics g)
@@ -62,11 +65,11 @@ namespace CrazyDriver
         {
             if (state == 1 && X_Position > 20)
             {
-                X_Position -= 30; //X_Position -= player.carModel.speed
+                X_Position -= (int)((decimal)0.5 * carHorsePower); //X_Position -= player.carModel.speed
             }
             if (state == 2 && X_Position < width - Car.WIDTH * 2)
             {
-                X_Position += 30; //Y_Position -= player.carModel.speed
+                X_Position += (int)((decimal)0.5 * carHorsePower); //Y_Position -= player.carModel.speed
             }
         }
 

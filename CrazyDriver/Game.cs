@@ -14,20 +14,26 @@ namespace CrazyDriver
     public partial class Game : Form
     {
         public Scene scene { get; set; }
-        public Timer spawningCars;
-        public Timer shortTimer;
-        public Timer speedTimer;
-        public int state;  //1->left, 2->right, 0->none
-        public int spawningCarsCounter;
-        public int scoreCounter;
-        public static int scoreSeed = 1;
-        public int carSpeedIncrease;
-        SoundPlayer music;
-        public Game()
+        public Timer spawningCars { get; set; }
+        public Timer shortTimer { get; set; }
+        public Timer speedTimer { get; set; }
+        public int state { get; set; }  //1->left, 2->right, 0->none
+        public int spawningCarsCounter { get; set; }
+        public int scoreCounter { get; set; }
+        public static int scoreSeed { get; set; } = 1;
+        public int carSpeedIncrease { get; set; }
+        SoundPlayer music { get; set; }
+        public UserData user { get; set; }
+        public User users { get; set; }
+        public PlayerCar playerCar { get; set; }
+        public Game(UserData user, User users, PlayerCar car)
         {
             InitializeComponent();
+            this.user = user;
+            this.users = users;
+            this.playerCar = car;
             DoubleBuffered = true;
-            scene = new Scene(this.Width, this.Height);
+            scene = new Scene(this.Width, this.Height, playerCar);
             spawningCars = new Timer();
             shortTimer = new Timer();
             speedTimer = new Timer();
@@ -84,7 +90,7 @@ namespace CrazyDriver
 
         private void Game_SizeChanged(object sender, EventArgs e)
         {
-            scene = new Scene(this.Width, this.Height);
+            scene = new Scene(this.Width, this.Height, playerCar);
             Invalidate();
         }
 
@@ -112,6 +118,12 @@ namespace CrazyDriver
         {
             if (scene.isHit())
             {
+                if(user.userScore < scoreCounter)
+                {
+                    user.userScore = scoreCounter;
+                }
+
+                user.userCoins += (int)(scoreCounter * 25);   
                 state = 0;
                 pauseTimers(true);
                 Lose form = new Lose();              
@@ -125,8 +137,12 @@ namespace CrazyDriver
                 else
                 {
                     music.Stop();
-                    Menu.menuMusic.Play();
-                    this.Close();
+                    
+                    Hide();
+                    Menu m = new Menu(user, users);
+                    m.ShowDialog();
+                    Close();
+
                 }
             }
             scene.move(state);
@@ -161,7 +177,7 @@ namespace CrazyDriver
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pauseTimers(true);
-            Paused form = new Paused();
+            Paused form = new Paused(user, scoreCounter);
             DialogResult res = form.ShowDialog();
             if (res.Equals(DialogResult.OK))
             {

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class DataTransfer
     {
         public static Point point { get; set; }

@@ -33,8 +33,11 @@ namespace CrazyDriver
             this.playBtn = new System.Windows.Forms.Button();
             this.settingsBtn = new System.Windows.Forms.Button();
             this.shopBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
+            this.lbluser = new System.Windows.Forms.Label();
+            this.lblbestscore = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // playBtn
@@ -42,10 +45,10 @@ namespace CrazyDriver
             this.playBtn.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.playBtn.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playBtn.ForeColor = System.Drawing.Color.White;
-            this.playBtn.Location = new System.Drawing.Point(582, 500);
+            this.playBtn.Location = new System.Drawing.Point(509, 375);
             this.playBtn.Margin = new System.Windows.Forms.Padding(0);
             this.playBtn.Name = "playBtn";
-            this.playBtn.Size = new System.Drawing.Size(300, 105);
+            this.playBtn.Size = new System.Drawing.Size(262, 79);
             this.playBtn.TabIndex = 0;
             this.playBtn.Text = "PLAY";
             this.playBtn.UseVisualStyleBackColor = false;
@@ -56,10 +59,10 @@ namespace CrazyDriver
             this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.settingsBtn.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.settingsBtn.ForeColor = System.Drawing.Color.White;
-            this.settingsBtn.Location = new System.Drawing.Point(0, 500);
+            this.settingsBtn.Location = new System.Drawing.Point(0, 375);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(0);
             this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Size = new System.Drawing.Size(300, 105);
+            this.settingsBtn.Size = new System.Drawing.Size(262, 79);
             this.settingsBtn.TabIndex = 2;
             this.settingsBtn.Text = "Settings";
             this.settingsBtn.UseVisualStyleBackColor = false;
@@ -70,53 +73,94 @@ namespace CrazyDriver
             this.shopBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.shopBtn.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.shopBtn.ForeColor = System.Drawing.Color.White;
-            this.shopBtn.Location = new System.Drawing.Point(292, 500);
+            this.shopBtn.Location = new System.Drawing.Point(256, 375);
             this.shopBtn.Margin = new System.Windows.Forms.Padding(0);
             this.shopBtn.Name = "shopBtn";
-            this.shopBtn.Size = new System.Drawing.Size(300, 105);
+            this.shopBtn.Size = new System.Drawing.Size(262, 79);
             this.shopBtn.TabIndex = 3;
             this.shopBtn.Text = "Shop";
             this.shopBtn.UseVisualStyleBackColor = false;
+            this.shopBtn.Click += new System.EventHandler(this.shopBtn_Click);
             // 
-            // label1
+            // lblMoney
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.IndianRed;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(689, -1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 50);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Money: 0$";
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.BackColor = System.Drawing.Color.IndianRed;
+            this.lblMoney.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMoney.ForeColor = System.Drawing.Color.White;
+            this.lblMoney.Location = new System.Drawing.Point(484, -1);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(105, 37);
+            this.lblMoney.TabIndex = 4;
+            this.lblMoney.Text = "Money:";
+            // 
+            // lbluser
+            // 
+            this.lbluser.AutoSize = true;
+            this.lbluser.BackColor = System.Drawing.Color.IndianRed;
+            this.lbluser.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbluser.ForeColor = System.Drawing.Color.White;
+            this.lbluser.Location = new System.Drawing.Point(0, -1);
+            this.lbluser.Name = "lbluser";
+            this.lbluser.Size = new System.Drawing.Size(76, 37);
+            this.lbluser.TabIndex = 6;
+            this.lbluser.Text = "User:";
+            // 
+            // lblbestscore
+            // 
+            this.lblbestscore.AutoSize = true;
+            this.lblbestscore.BackColor = System.Drawing.Color.IndianRed;
+            this.lblbestscore.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblbestscore.ForeColor = System.Drawing.Color.White;
+            this.lblbestscore.Location = new System.Drawing.Point(0, 338);
+            this.lblbestscore.Name = "lblbestscore";
+            this.lblbestscore.Size = new System.Drawing.Size(141, 37);
+            this.lblbestscore.TabIndex = 7;
+            this.lblbestscore.Text = "Best score:";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, -1);
+            this.button1.Location = new System.Drawing.Point(1, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 50);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Sign in/Sign up";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Save Data";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(658, 196);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(881, 600);
+            this.ClientSize = new System.Drawing.Size(771, 450);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblbestscore);
+            this.Controls.Add(this.lbluser);
+            this.Controls.Add(this.lblMoney);
             this.Controls.Add(this.shopBtn);
             this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.playBtn);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Menu";
             this.Text = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.Load += new System.EventHandler(this.Menu_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Menu_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +171,10 @@ namespace CrazyDriver
         private System.Windows.Forms.Button playBtn;
         private System.Windows.Forms.Button settingsBtn;
         private System.Windows.Forms.Button shopBtn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMoney;
+        private System.Windows.Forms.Label lbluser;
+        private System.Windows.Forms.Label lblbestscore;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNext;
     }
 }

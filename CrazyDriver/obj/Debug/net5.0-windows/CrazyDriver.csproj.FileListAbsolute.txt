@@ -17,7 +17,6 @@ C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDri
 C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\ref\CrazyDriver.dll
 C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.pdb
 C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.genruntimeconfig.cache
-C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Main.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\bin\Debug\net5.0-windows\CrazyDriver.exe
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\bin\Debug\net5.0-windows\CrazyDriver.deps.json
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\bin\Debug\net5.0-windows\CrazyDriver.runtimeconfig.json
@@ -43,3 +42,10 @@ C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debu
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Paused.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Menu.resources
 C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Settings.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Game.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Lose.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Menu.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Paused.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Properties.Resources.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Settings.resources
+C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Shop.resources

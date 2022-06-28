@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CrazyDriver
 {
+    [Serializable]
     public class UserRegisterDTO
     {
         public string userName { get; set; }
