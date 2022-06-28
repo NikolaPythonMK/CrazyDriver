@@ -14,7 +14,6 @@ namespace CrazyDriver
         public PlayerCar player { get; set; }
         public int X_Position { get; set; }
         public int Y_Position { get; set; }
-        public int score { get; set; }
         public int carsPerSpawn { get; set; }
         public decimal carHorsePower { get; set; }
         public static int maxCarsPerSpawn = 4;
@@ -28,9 +27,7 @@ namespace CrazyDriver
             cars = new List<BotCar>();
             X_Position = width / 2;
             Y_Position = height - (Car.HEIGHT + Car.HEIGHT / 2);
-            score = 0;
             carsPerSpawn = 1;
-            //vo PlayerCar() ke se primaat propertinjata od DTO objektot (slika, horsepower)
             player = car;
             carHorsePower = car.horsePower;
         }
@@ -67,7 +64,7 @@ namespace CrazyDriver
             {
                 X_Position -= (int)((decimal)0.5 * carHorsePower); //X_Position -= player.carModel.speed
             }
-            if (state == 2 && X_Position < width - Car.WIDTH * 2)
+            if (state == 2 && X_Position < width - Car.WIDTH + 30)
             {
                 X_Position += (int)((decimal)0.5 * carHorsePower); //Y_Position -= player.carModel.speed
             }

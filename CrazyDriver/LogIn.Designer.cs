@@ -29,6 +29,7 @@ namespace CrazyDriver
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -41,45 +42,55 @@ namespace CrazyDriver
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(212, 270);
+            this.btnLogin.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(222, 397);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(103, 38);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Log In";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(157, 212);
+            this.txtEmail.Location = new System.Drawing.Point(179, 294);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(192, 23);
+            this.txtEmail.Size = new System.Drawing.Size(219, 27);
             this.txtEmail.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(157, 241);
+            this.txtPassword.Location = new System.Drawing.Point(179, 349);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(192, 23);
+            this.txtPassword.Size = new System.Drawing.Size(219, 27);
             this.txtPassword.TabIndex = 2;
             // 
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
-            this.lblRegister.Location = new System.Drawing.Point(156, 296);
+            this.lblRegister.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegister.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRegister.ForeColor = System.Drawing.Color.White;
+            this.lblRegister.Location = new System.Drawing.Point(112, 439);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(193, 15);
+            this.lblRegister.Size = new System.Drawing.Size(317, 28);
             this.lblRegister.TabIndex = 3;
             this.lblRegister.Text = "You don`t have an account Register";
             // 
             // lblRegisterHere
             // 
             this.lblRegisterHere.AutoSize = true;
-            this.lblRegisterHere.ForeColor = System.Drawing.Color.Blue;
-            this.lblRegisterHere.Location = new System.Drawing.Point(237, 311);
+            this.lblRegisterHere.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegisterHere.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRegisterHere.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblRegisterHere.Location = new System.Drawing.Point(241, 482);
             this.lblRegisterHere.Name = "lblRegisterHere";
-            this.lblRegisterHere.Size = new System.Drawing.Size(30, 15);
+            this.lblRegisterHere.Size = new System.Drawing.Size(59, 31);
             this.lblRegisterHere.TabIndex = 4;
             this.lblRegisterHere.Text = "here";
             this.lblRegisterHere.Click += new System.EventHandler(this.lblRegisterHere_Click);
@@ -87,34 +98,41 @@ namespace CrazyDriver
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(94, 244);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(44, 343);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(110, 31);
             this.label4.TabIndex = 10;
             this.label4.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 215);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(84, 294);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 15);
+            this.label3.Size = new System.Drawing.Size(70, 31);
             this.label3.TabIndex = 9;
             this.label3.Text = "Email";
             // 
             // lblException
             // 
             this.lblException.AutoSize = true;
-            this.lblException.Location = new System.Drawing.Point(194, 403);
+            this.lblException.Location = new System.Drawing.Point(222, 537);
             this.lblException.Name = "lblException";
-            this.lblException.Size = new System.Drawing.Size(0, 15);
+            this.lblException.Size = new System.Drawing.Size(0, 20);
             this.lblException.TabIndex = 11;
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 427);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(543, 569);
             this.Controls.Add(this.lblException);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -124,6 +142,7 @@ namespace CrazyDriver
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LogIn";

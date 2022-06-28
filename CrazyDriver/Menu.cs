@@ -86,6 +86,10 @@ namespace CrazyDriver
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!DataTransfer.gamePlayed || DataTransfer.saved)
+            {
+                return;
+            }
             FileStream stream = new FileStream(@"data.data", FileMode.Create);
             IFormatter formatter = new BinaryFormatter();
             SaveDictonary dictonary = new SaveDictonary();
@@ -94,6 +98,8 @@ namespace CrazyDriver
 #pragma warning disable SYSLIB0011 // Type or member is obsolete
             formatter.Serialize(stream, save);
 #pragma warning restore SYSLIB0011 // Type or member is obsolete
+            button1.Text = "Saved!";
+            DataTransfer.saved = true;
         }
 
         private void shopBtn_Click(object sender, EventArgs e)

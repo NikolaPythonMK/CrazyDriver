@@ -28,12 +28,13 @@ namespace CrazyDriver
         public PlayerCar playerCar { get; set; }
         public Game(UserData user, User users, PlayerCar car)
         {
-            InitializeComponent();
+            //InitializeComponent();
             this.user = user;
             this.users = users;
             this.playerCar = car;
             DoubleBuffered = true;
             scene = new Scene(this.Width, this.Height, playerCar);
+            InitializeComponent();
             spawningCars = new Timer();
             shortTimer = new Timer();
             speedTimer = new Timer();
@@ -45,6 +46,9 @@ namespace CrazyDriver
             spawningCarsCounter = 0;
             scoreCounter = 0;
             carSpeedIncrease = 10;
+
+            DataTransfer.gamePlayed = true;
+            DataTransfer.saved = false; 
 
             Invalidate();
         }
@@ -86,6 +90,7 @@ namespace CrazyDriver
                 music = new SoundPlayer(@"sounds\ingame_music.wav");
                 music.Play();
             }
+            bestCoreEl.Text = "Best Score: " + user.userScore;
         }
 
         private void Game_SizeChanged(object sender, EventArgs e)
@@ -126,7 +131,7 @@ namespace CrazyDriver
                 user.userCoins += (int)(scoreCounter * 25);   
                 state = 0;
                 pauseTimers(true);
-                Lose form = new Lose();              
+                Lose form = new Lose(user, scoreCounter);              
                 DialogResult res = form.ShowDialog();
                 if(res.Equals(DialogResult.Yes))
                 {
@@ -136,13 +141,11 @@ namespace CrazyDriver
                 }
                 else
                 {
-                    music.Stop();
-                    
+                    music.Stop();                   
                     Hide();
                     Menu m = new Menu(user, users);
                     m.ShowDialog();
                     Close();
-
                 }
             }
             scene.move(state);
@@ -177,7 +180,7 @@ namespace CrazyDriver
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pauseTimers(true);
-            Paused form = new Paused(user, scoreCounter);
+            Paused form = new Paused(user, scoreCounter, users);
             DialogResult res = form.ShowDialog();
             if (res.Equals(DialogResult.OK))
             {

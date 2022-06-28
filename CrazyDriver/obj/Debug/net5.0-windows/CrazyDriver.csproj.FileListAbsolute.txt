@@ -49,3 +49,4 @@ C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDri
 C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Properties.Resources.resources
 C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Settings.resources
 C:\Users\Jovan\Desktop\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Shop.resources
+C:\Users\Nikola\Desktop\CrazyDriver\CrazyDriver\CrazyDriver\CrazyDriver\obj\Debug\net5.0-windows\CrazyDriver.Shop.resources

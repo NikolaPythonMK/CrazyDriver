@@ -73,6 +73,26 @@ namespace CrazyDriver.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap garage_bg {
+            get {
+                object obj = ResourceManager.GetObject("garage_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_bg {
+            get {
+                object obj = ResourceManager.GetObject("login_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pause {
             get {
                 object obj = ResourceManager.GetObject("pause", resourceCulture);
@@ -106,6 +126,16 @@ namespace CrazyDriver.Properties {
         internal static System.Drawing.Bitmap pause_resized {
             get {
                 object obj = ResourceManager.GetObject("pause_resized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reg_bg {
+            get {
+                object obj = ResourceManager.GetObject("reg_bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

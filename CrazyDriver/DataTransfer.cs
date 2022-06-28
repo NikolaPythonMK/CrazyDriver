@@ -11,5 +11,7 @@ namespace CrazyDriver
     public class DataTransfer
     {
         public static Point point { get; set; }
+        public static bool gamePlayed { get; set; }
+        public static bool saved = false;
     }
 }

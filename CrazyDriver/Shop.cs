@@ -27,12 +27,6 @@ namespace CrazyDriver
             cars.Add(new PlayerCar("images/sportsCar5.png", 110, 250000));
             lblMoney.Text = String.Format("Money: {0}$", userData.userCoins);
         }
-
-        private void Shop_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, EventArgs e, string price, PlayerCar car)
         {
             if(userData.userCoins >= Convert.ToInt32(price))
@@ -55,11 +49,15 @@ namespace CrazyDriver
             {
                 if(userData.userCars.Where(s => s.path.Equals(c.path)).FirstOrDefault() == null){
                         e.Graphics.DrawImage(c.carModel, x, y, Car.WIDTH, Car.HEIGHT);
-                        e.Graphics.DrawString(c.price.ToString(), new Font("Arial", 15), new SolidBrush(Color.Black), new Point(x + 10, y + 210));
+                        e.Graphics.DrawString(String.Format("{0}$", c.price.ToString()), new Font("Arial", 15), new SolidBrush(Color.Black), new Point(x + 10, y + 210));
 
                         Button btn1 = new Button();
 
                         btn1.Text = "BUY";
+                 
+                        btn1.Height = 50;
+                        btn1.BackColor = Color.Green;
+                        btn1.ForeColor = Color.White;
                         btn1.Name = c.price.ToString();
                         btn1.Visible = true;
                         btn1.Location = new Point(x + 10, y + 240);
@@ -81,6 +79,23 @@ namespace CrazyDriver
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void Shop_Load(object sender, EventArgs e)
+        {
+            this.BackgroundImage = getFormBackgroundImage();
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+        }
+
+        private Bitmap getFormBackgroundImage()
+        {
+            Bitmap bmp = new Bitmap(this.ClientSize.Width, this.ClientSize.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.DrawImage(this.BackgroundImage,
+                    new Rectangle(0, 0, bmp.Width, bmp.Height));
+            }
+            return bmp;
         }
     }
 }

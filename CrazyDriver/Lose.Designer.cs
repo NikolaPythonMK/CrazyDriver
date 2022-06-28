@@ -81,11 +81,11 @@ namespace CrazyDriver
             // 
             this.continueForEl.AutoSize = true;
             this.continueForEl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.continueForEl.Location = new System.Drawing.Point(222, 243);
+            this.continueForEl.Location = new System.Drawing.Point(209, 243);
             this.continueForEl.Name = "continueForEl";
-            this.continueForEl.Size = new System.Drawing.Size(292, 41);
+            this.continueForEl.Size = new System.Drawing.Size(323, 41);
             this.continueForEl.TabIndex = 4;
-            this.continueForEl.Text = "Continue for X gold?";
+            this.continueForEl.Text = "Continue for X money?";
             // 
             // yesBtn
             // 
