@@ -141,7 +141,10 @@ namespace CrazyDriver
                 }
                 else
                 {
-                    music.Stop();                   
+                    if (ControlsConfiguration.menuMusic)
+                    {
+                        music.Stop();
+                    }   
                     Hide();
                     Menu m = new Menu(user, users);
                     m.ShowDialog();
